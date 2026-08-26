@@ -1,0 +1,6 @@
+{
+  "name": "Munnu Collections",
+  "description": "Premium Saree and Women's Fashion boutique e-commerce application with customer accounts, shopping cart, checkout, order tracking, WhatsApp support, and real-time Admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

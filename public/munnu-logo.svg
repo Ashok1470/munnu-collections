@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <defs>
+    <!-- Embedded Fonts for standalone rendering -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=Cormorant+Garamond:ital,wght@1,600;1,700&amp;family=Montserrat:wght@700;800&amp;display=swap');
+      .gold-munnu-text {
+        font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+        font-weight: 900;
+        letter-spacing: 5px;
+      }
+      .pink-collections-text {
+        font-family: 'Montserrat', 'Cinzel', sans-serif;
+        font-weight: 800;
+        letter-spacing: 11px;
+      }
+      .script-quote-text {
+        font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, cursive, serif;
+        font-style: italic;
+        font-weight: 700;
+      }
+    </style>
+
+    <!-- Deep Midnight Luxury Background -->
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#21081a" />
+      <stop offset="50%" stop-color="#0e040c" />
+      <stop offset="85%" stop-color="#060206" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- 3D Luxury Gold Metallic Gradients -->
+    <linearGradient id="gold3dMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8DC" />
+      <stop offset="20%" stop-color="#FFDE72" />
+      <stop offset="45%" stop-color="#E5B93C" />
+      <stop offset="70%" stop-color="#B8860B" />
+      <stop offset="90%" stop-color="#805700" />
+      <stop offset="100%" stop-color="#4A3100" />
+    </linearGradient>
+
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#FFDF79" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="goldBevelRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7" />
+      <stop offset="25%" stop-color="#E5B93C" />
+      <stop offset="50%" stop-color="#8C6D12" />
+      <stop offset="75%" stop-color="#F9E08A" />
+      <stop offset="100%" stop-color="#AA820A" />
+    </linearGradient>
+
+    <!-- Radiant Neon Pink Gradients -->
+    <linearGradient id="pinkNeonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8D5" />
+      <stop offset="30%" stop-color="#FF3399" />
+      <stop offset="70%" stop-color="#E6007A" />
+      <stop offset="100%" stop-color="#99004D" />
+    </linearGradient>
+
+    <linearGradient id="pinkGlowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF66B2" />
+      <stop offset="50%" stop-color="#FF1493" />
+      <stop offset="100%" stop-color="#FF66B2" />
+    </linearGradient>
+
+    <!-- Filters & Glows -->
+    <filter id="ultraGoldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur1" />
+      <feGaussianBlur stdDeviation="8" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonPinkAura" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="12" result="blur2" />
+      <feGaussianBlur stdDeviation="20" result="blur3" />
+      <feMerge>
+        <feMergeNode in="blur3" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="sparkleDrop" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 1   0 1 0 0 0.9   0 0 1 0 0.6  0 0 0 1 0" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ================= BASE & RIMS ================= -->
+  <!-- Base Circular Canvas -->
+  <circle cx="300" cy="300" r="294" fill="url(#bgRadial)" />
+
+  <!-- Outer Neon Pink Glow Halo -->
+  <circle cx="300" cy="300" r="280" fill="none" stroke="url(#pinkNeonGradient)" stroke-width="5" filter="url(#neonPinkAura)" opacity="0.95" />
+
+  <!-- Outer Heavy Beveled Gold Rim -->
+  <circle cx="300" cy="300" r="285" fill="none" stroke="url(#goldBevelRim)" stroke-width="6.5" />
+  <circle cx="300" cy="300" r="275" fill="none" stroke="url(#gold3dMain)" stroke-width="2" opacity="0.85" />
+  <circle cx="300" cy="300" r="272" fill="none" stroke="#FFA8D5" stroke-width="0.8" opacity="0.5" />
+
+  <!-- Quad Corner Flare Sparkles -->
+  <g transform="translate(300, 15)" filter="url(#sparkleDrop)">
+    <polygon points="0,-12 3,0 12,3 3,6 0,18 -3,6 -12,3 -3,0" fill="#FFFCE6" />
+    <circle cx="0" cy="3" r="2" fill="#FFFFFF" />
+  </g>
+  <g transform="translate(300, 585)" filter="url(#sparkleDrop)">
+    <polygon points="0,-12 3,0 12,3 3,6 0,18 -3,6 -12,3 -3,0" fill="#FFA8D5" />
+    <circle cx="0" cy="3" r="2" fill="#FFFFFF" />
+  </g>
+  <g transform="translate(15, 300)" filter="url(#sparkleDrop)">
+    <polygon points="0,-10 2.5,0 10,2.5 2.5,5 0,15 -2.5,5 -10,2.5 -2.5,0" fill="#FFDF79" />
+  </g>
+  <g transform="translate(585, 300)" filter="url(#sparkleDrop)">
+    <polygon points="0,-10 2.5,0 10,2.5 2.5,5 0,15 -2.5,5 -10,2.5 -2.5,0" fill="#FFA8D5" />
+  </g>
+
+  <!-- ================= CENTER LOGO EMBLEM ================= -->
+
+  <!-- Golden Luxury Shopping Bag Outline -->
+  <g id="shopping-bag" opacity="0.95">
+    <!-- Bag Handle Loop -->
+    <path d="M 245 155 C 245 90, 355 90, 355 155" fill="none" stroke="url(#gold3dMain)" stroke-width="9.5" stroke-linecap="round" filter="url(#ultraGoldGlow)" />
+    <!-- Rivet Fixings -->
+    <circle cx="245" cy="155" r="8" fill="url(#gold3dMain)" />
+    <circle cx="245" cy="155" r="4" fill="#150510" />
+    <circle cx="355" cy="155" r="8" fill="url(#gold3dMain)" />
+    <circle cx="355" cy="155" r="4" fill="#150510" />
+
+    <!-- Bag Trapezoid Frame -->
+    <path d="M 210 135 L 390 135 L 425 340 L 175 340 Z" fill="none" stroke="url(#gold3dMain)" stroke-width="5" stroke-linejoin="round" opacity="0.8" />
+  </g>
+
+  <!-- Crowned Queen / Princess Profile Silhouette (Right of M) -->
+  <g id="queen-silhouette" transform="translate(395, 140)">
+    <!-- 5-Peak Imperial Crown -->
+    <g transform="translate(10, 5)">
+      <path d="M 0 30 L 4 12 L 15 22 L 27 5 L 39 22 L 50 12 L 54 30 Z" fill="url(#gold3dMain)" filter="url(#ultraGoldGlow)" />
+      <!-- Crown Jewels / Pearls -->
+      <circle cx="4" cy="11" r="3" fill="#FFFCE6" />
+      <circle cx="27" cy="4" r="3.5" fill="#FFFCE6" />
+      <circle cx="50" cy="11" r="3" fill="#FFFCE6" />
+      <rect x="0" y="27" width="54" height="4" rx="2" fill="url(#goldHighlight)" />
+    </g>
+
+    <!-- Princess Face & Flowing Curly Hair -->
+    <path d="M 28 42 C 35 39, 44 44, 46 51 C 48 58, 45 64, 40 68 C 43 70, 46 72, 45 77 C 42 81, 35 83, 33 89 C 40 101, 54 113, 60 142 C 53 129, 43 123, 36 125 C 29 129, 22 145, 17 165 C 12 144, 17 122, 24 110 C 29 100, 31 88, 24 76 C 17 64, 20 47, 28 42 Z" 
+          fill="url(#pinkNeonGradient)" 
+          filter="url(#neonPinkAura)" 
+          opacity="0.98" />
+  </g>
+
+  <!-- Giant Stylized 3D Letter 'M' -->
+  <g id="letter-m">
+    <!-- Right Golden Stem of M with 3D Bevel Facets -->
+    <path d="M 295 160 L 350 330 L 405 160 L 435 160 L 405 345 L 355 345 L 300 195 L 295 160 Z" fill="url(#gold3dMain)" filter="url(#ultraGoldGlow)" />
+    
+    <!-- Central Golden Peak Highlight -->
+    <path d="M 185 160 L 300 330 L 370 160 L 335 160 L 295 270 L 235 160 Z" fill="url(#goldHighlight)" opacity="0.9" />
+
+    <!-- Left Leg: Sweeping Neon Pink Curling Ribbon -->
+    <path d="M 160 160 C 220 160, 295 210, 300 340 C 265 335, 205 290, 168 220 C 156 195, 152 172, 160 160 Z" 
+          fill="url(#pinkNeonGradient)" 
+          filter="url(#neonPinkAura)" />
+    <!-- Ribbon Inner Shimmer -->
+    <path d="M 175 170 C 225 175, 280 225, 285 320 C 260 305, 215 270, 182 215 C 173 198, 170 180, 175 170 Z" 
+          fill="#FFA8D5" 
+          opacity="0.6" />
+  </g>
+
+  <!-- Ornate 5-Petal Pink Lotus Blossom under the M -->
+  <g id="lotus-ornament" transform="translate(300, 350)">
+    <!-- Central Lotus Petals -->
+    <path d="M 0 -28 C -8 -15, -10 -5, 0 0 C 10 -5, 8 -15, 0 -28 Z" fill="url(#pinkNeonGradient)" filter="url(#neonPinkAura)" />
+    <path d="M -9 -20 C -22 -12, -22 0, 0 0 C -12 -5, -15 -12, -9 -20 Z" fill="url(#pinkNeonGradient)" opacity="0.85" />
+    <path d="M 9 -20 C 22 -12, 22 0, 0 0 C 12 -5, 15 -12, 9 -20 Z" fill="url(#pinkNeonGradient)" opacity="0.85" />
+    <path d="M -16 -12 C -30 -3, -26 6, 0 2 C -18 1, -22 -6, -16 -12 Z" fill="#FFA8D5" opacity="0.75" />
+    <path d="M 16 -12 C 30 -3, 26 6, 0 2 C 18 1, 22 -6, 16 -12 Z" fill="#FFA8D5" opacity="0.75" />
+    
+    <!-- Ornate Golden Filigree Scrolls -->
+    <path d="M -125 10 C -75 -5, -35 25, -6 6 C 0 3, 6 3, 12 6 C 41 25, 81 -5, 131 10" fill="none" stroke="url(#gold3dMain)" stroke-width="4.5" stroke-linecap="round" filter="url(#ultraGoldGlow)" />
+    <circle cx="0" cy="6" r="5" fill="url(#pinkNeonGradient)" />
+  </g>
+
+  <!-- ================= TYPOGRAPHY ================= -->
+
+  <!-- MUNNU (3D Embossed Gold) -->
+  <g id="munnu-brand-text" transform="translate(300, 442)">
+    <!-- Deep Drop Shadow for 3D Pop -->
+    <text x="0" y="4" text-anchor="middle" class="gold-munnu-text" font-size="84" fill="#2E1C00">
+      MUNNU
+    </text>
+    <!-- Mid Tone Bevel -->
+    <text x="0" y="2" text-anchor="middle" class="gold-munnu-text" font-size="84" fill="#996D0A">
+      MUNNU
+    </text>
+    <!-- Foreground Radiant 3D Gold -->
+    <text x="0" y="0" text-anchor="middle" class="gold-munnu-text" font-size="84" fill="url(#gold3dMain)" filter="url(#ultraGoldGlow)">
+      MUNNU
+    </text>
+    <!-- Specular Highlight Overlay -->
+    <text x="0" y="-1" text-anchor="middle" class="gold-munnu-text" font-size="84" fill="url(#goldHighlight)" opacity="0.45">
+      MUNNU
+    </text>
+  </g>
+
+  <!-- COLLECTIONS (Letterspaced Pink with Side Gold Rules) -->
+  <g id="collections-subtext" transform="translate(300, 480)">
+    <!-- Left Accent Gold Bar -->
+    <line x1="-220" y1="-7" x2="-145" y2="-7" stroke="url(#gold3dMain)" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="-145" cy="-7" r="2.5" fill="url(#gold3dMain)" />
+
+    <!-- Text -->
+    <text x="0" y="0" text-anchor="middle" class="pink-collections-text" font-size="24" fill="url(#pinkNeonGradient)" filter="url(#neonPinkAura)">
+      COLLECTIONS
+    </text>
+
+    <!-- Right Accent Gold Bar -->
+    <circle cx="145" cy="-7" r="2.5" fill="url(#gold3dMain)" />
+    <line x1="145" y1="-7" x2="220" y2="-7" stroke="url(#gold3dMain)" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ================= SIGNATURE QUOTE BANNER ================= -->
+  <g id="quote-cartouche" transform="translate(300, 532)">
+    <!-- Ornate Golden Cartouche Slogan Box -->
+    <path d="M -190 -22 C -178 -22, -165 -28, -145 -28 L 145 -28 C 165 -28, 178 -22, 190 -22 C 202 -22, 196 0, 184 12 C 165 18, 145 18, 125 18 L -125 18 C -145 18, -165 18, -184 12 C -196 0, -202 -22, -190 -22 Z" 
+          fill="#0c040e" 
+          stroke="url(#gold3dMain)" 
+          stroke-width="2.2" 
+          filter="url(#ultraGoldGlow)" />
+    
+    <!-- Italic Quote Text with High-Contrast Multi-Color Tone -->
+    <text x="0" y="-3" text-anchor="middle" class="script-quote-text" font-size="20">
+      <tspan fill="#FFFFFF">“Style </tspan>
+      <tspan fill="#FFA8D5" filter="url(#neonPinkAura)">Speaks </tspan>
+      <tspan fill="#FFF4C2">Louder </tspan>
+      <tspan fill="#FFA8D5" filter="url(#neonPinkAura)">Than </tspan>
+      <tspan fill="#FFFFFF">Words”</tspan>
+    </text>
+
+    <!-- Bottom Golden Flourish Symmetrical Loop -->
+    <path d="M -75 26 C -38 20, -18 32, -6 26 L 0 28 L 6 26 C 18 32, 38 20, 75 26" fill="none" stroke="url(#gold3dMain)" stroke-width="2.2" stroke-linecap="round" />
+    
+    <!-- Radiant Pink Heart -->
+    <path d="M 0 20 C -3.5 15, -8 18, -8 23 C -8 28, 0 33, 0 34 C 0 33, 8 28, 8 23 C 8 18, 3.5 15, 0 20 Z" fill="url(#pinkNeonGradient)" filter="url(#neonPinkAura)" />
+  </g>
+</svg>
